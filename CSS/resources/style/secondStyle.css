@@ -1,0 +1,13 @@
+p {
+    text-align: center;
+}
+
+.mamifero {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.ave {
+    color: green;
+    font-family: 'Arial', sans-serif;
+}

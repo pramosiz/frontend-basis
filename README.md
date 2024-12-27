@@ -2,3 +2,4 @@
 Basis of FrontEnd with:
 
 - HTML
+- CSS
