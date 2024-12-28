@@ -3,3 +3,7 @@ Basis of FrontEnd with:
 
 - HTML
 - CSS
+- JavaScript
+
+Projects JavaScript:
+- Question game
