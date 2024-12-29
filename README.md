@@ -9,3 +9,4 @@ Projects JavaScript:
 - Question game
 - Calculator
 - Movie catalog
+- School report

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>School Report</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+    <script src="resources/scripts/script.js"></script>
+</head>
+
+<body onload="showMarks()">
+    <div class="logo">
+        <img src="resources/images/hogwarts.jpeg" />
+        <h2>School Report</h2>
+    </div>
+    <div class="student">
+        <h3>Student: Pablo Ramos</h3>
+    </div>
+    <h4>Marks:</h4>
+    <ul id="marksList"></ul>
+    <div class="info">
+        <h4>Mean: <span id="mean"></span></h4>
+        <button onclick="calculateMean()">Calculate Mean</button>
+        <h4>Highest Mark: <span id="highestMark"></span></h4>
+        <button onclick="calculateHighestMark()">Calculate Highest Mark</button>
+        <h4>Any mark no pass: <span id="anyMarkNoPass"></span></h4>
+        <button onclick="calculateAnyMarkNoPass()">Calculate Any Mark No Pass</button>
+    </div>
+</body>
+
+</html>
