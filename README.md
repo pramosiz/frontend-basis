@@ -7,3 +7,4 @@ Basis of FrontEnd with:
 
 Projects JavaScript:
 - Question game
+- Calculator
