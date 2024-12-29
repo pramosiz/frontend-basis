@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Movie Catalog</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+    <script src="resources/scripts/script.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to the cinema!</h1>
+    <h3>--- Options ---</h3>
+    <p>Write your age and movie genre to recommend you a movie:</p>
+    <p>Edad: <input type="text" id="age"></p>
+    <button onclick="recommend('drama')">Drama</button>
+    <button onclick="recommend('comedy')">Comedy</button>
+    <button onclick="recommend('musical')">Musical</button>
+    <button onclick="recommend('horror')">Terror</button>
+    <h3>Our recommendation:</h3>
+    <h2 id="recommendation"></h2>
+</body>
+
+</html>
