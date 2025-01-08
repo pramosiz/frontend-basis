@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Search Movie</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/style.css">
+</head>
+
+<body>
+    <h1>Seeker</h1>
+    <hr>
+    <div class="block">
+        Please, select an option
+        <select id="mySelect">
+            <option value="resources/data/peliculas.json">Movies</option>
+            <option value="resources/data/series.json">Series</option>
+        </select>
+    </div>
+    <div class="block">
+        <input id="myInput" placeholder="Enter to search...">
+        <button id="myButton">Search</button>
+    </div>
+    <div class="block">
+        <ul id="myList"></ul>
+    </div>
+    <script src="resources/scripts/index.js"></script> <!-- Lo ponemos al final para que cargue al final -->
+</body>
+
+</html>

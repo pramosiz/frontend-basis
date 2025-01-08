@@ -10,3 +10,4 @@ Projects JavaScript:
 - Calculator
 - Movie catalog
 - School report
+- Movie seeker
