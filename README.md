@@ -11,3 +11,4 @@ Projects JavaScript:
 - Movie catalog
 - School report
 - Movie seeker
+- Quotation site
