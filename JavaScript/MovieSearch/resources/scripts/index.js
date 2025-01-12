@@ -1,26 +1,26 @@
 // Variables
-let mySelector = document.getElementById('mySelect')
-let myInput = document.getElementById('myInput')
-let myButton = document.getElementById('myButton')
-let myList = document.getElementById('myList')
+let $mySelector = $('#mySelect')
+let $myInput = $('#myInput')
+let $myButton = $('#myButton')
+let $myList = $('#myList')
 
 let file = "resources/data/peliculas.json"
 
 // Listeners
-mySelector.addEventListener('change', changeFile)
-mySelector.addEventListener('changeMode', messageMode)
-myInput.addEventListener('keydown', checkInput)
-myButton.addEventListener('click', search)
+$mySelector.on('change', changeFile)
+$mySelector.on('changeMode', messageMode)
+$myInput.on('keydown', checkInput)
+$myButton.on('click', search)
 
 // Functions
 function changeFile() {
-    file = mySelector.value
+    file = $mySelector.val()
     let myEvent = new CustomEvent('changeMode')
-    mySelector.dispatchEvent(myEvent)
+    $mySelector[0].dispatchEvent(myEvent)
 }
 
 function messageMode() {
-    alert("File seeker already is " + mySelector.value)
+    alert("File seeker already is " + $mySelector.val())
 }
 
 function checkInput(event) {
@@ -30,33 +30,18 @@ function checkInput(event) {
 }
 
 function search() {
-    myList.innerHTML = ""
-    fetch(file)
-        .then(response => response.json())
-        .then(output => {
-            for (let item of output.data) {
-                if (item.nombre.startsWith(myInput.value.toUpperCase())) {
-                    let p = document.createElement('p')
-                    p.id = item.nombre
-                    p.innerHTML = item.sinopsis
-                    p.style.display = 'none'
-
-                    let li = document.createElement('li')
-                    li.innerHTML = item.nombre
-                    li.addEventListener("mouseover", function () {
-                        let p = document.getElementById(item.nombre)
-                        p.style.display = 'block'
-                    })
-
-                    li.addEventListener("mouseout", function () {
-                        let p = document.getElementById(item.nombre)
-                        p.style.display = 'none'
-                    })
-
-                    li.appendChild(p)
-                    myList.appendChild(li)
-                }
+    $myList.empty()
+    $.getJSON(file, (output) => {
+        $.each(output.data, (index, item) => {
+            if (item.nombre.startsWith($myInput.val().toUpperCase())) {
+                let $p = $('<p></p>').attr('id', item.nombre).html(item.sinopsis).hide()
+                let $li = $('<li></li>').html(item.nombre)
+                $li.on('mouseover', () => $p.show())
+                $li.on('mouseout', () => $p.hide())
+                $li.append($p)
+                $myList.append($li)
             }
         })
-        .catch(error => console.log(error))
+    }).fail((error) => console.log(error))
 }
+
