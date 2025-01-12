@@ -12,3 +12,4 @@ Projects JavaScript:
 - School report
 - Movie seeker
 - Quotation site
+- number-game (React App)
