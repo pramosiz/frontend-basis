@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Cell-Land</title>
+    <link rel="stylesheet" type="text/css" href="resources/styles/index.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body onload="getAll()">
+    <div class="title">
+        <h1>Cell-Land</h1>
+        <img src="resources/images/phone.jpg" alt="phone">
+    </div>
+    <hr class="line" />
+    <div>
+        <h2>Manage products</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Model</th>
+                    <th>Colour</th>
+                    <th>Storage</th>
+                    <th>Proccesor</th>
+                </tr>
+            </thead>
+            <tbody id="tableContent"></tbody>
+        </table>
+    </div>
+    <div>
+        <div>
+            <h4>Check product</h4>
+            <input type="number" id="txtCheck" placeholder="Enter ID">
+            <button onclick="checkOne()">Check</button>
+        </div>
+        <div>
+            <label for="checkName">Name:</label>
+            <textarea id="checkName" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="checkModel">Model:</label>
+            <textarea id="checkModel" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="checkColour">Colour:</label>
+            <textarea id="checkColour" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="checkStorage">Storage:</label>
+            <textarea id="checkStorage" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="checkProcessor">Proccesor:</label>
+            <textarea id="checkProcessor" rows="1" cols="30"></textarea>
+        </div><br />
+        <button onclick="modifyOne()">Modify</button>
+        <button onclick="deleteOne()">Delete</button>
+    </div>
+    <div>
+        <div>
+            <h4>Add product</h4>
+            <input type="text" id="inputName" placeholder="Name">
+            <input type="text" id="inputModel" placeholder="Model">
+            <input type="text" id="inputColour" placeholder="Colour">
+            <input type="text" id="inputStorage" placeholder="Storage">
+            <input type="text" id="inputProccesor" placeholder="Proccesor">
+            <button onclick="addOne()">Add</button>
+        </div>
+    </div>
+
+    <script src="resources/scripts/index.js"></script>
+</body>
+
+</html>
