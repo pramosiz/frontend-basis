@@ -15,3 +15,4 @@ Projects JavaScript:
 - number-game (React App)
 - Mobile server [uncompleted]
 - University Database
+- Travel Agency
