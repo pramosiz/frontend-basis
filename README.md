@@ -13,4 +13,5 @@ Projects JavaScript:
 - Movie seeker
 - Quotation site
 - number-game (React App)
-- Cell server [uncompleted]
+- Mobile server [uncompleted]
+- University Database
